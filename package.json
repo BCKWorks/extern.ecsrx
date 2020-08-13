@@ -1,24 +1,24 @@
 {
-  "name": "com.bckworks.extern.ecsrx",
-  "displayName": "BCKWorks External EcsRx",
+  "name": "com.intervr.extern.ecsrx",
+  "displayName": "EcsRx of iNTERVR External SDK",
   "description": "A reactive take on the ECS pattern for .net game developers",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "unity": "2019.4",
   "keywords": [
   ],
-  "homepage": "https://github.com/BCKWorks/extern.ecsrx#readme",
+  "homepage": "https://github.com/iNTERVR/extern.ecsrx#readme",
   "bugs": {
-    "url": "https://github.com/BCKWorks/extern.ecsrx/issues"
+    "url": "https://github.com/iNTERVR/extern.ecsrx/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BCKWorks/extern.ecsrx.git#upm"
+    "url": "git+https://github.com/iNTERVR/extern.ecsrx.git#upm"
   },
   "license": "MIT",
   "author": {
-    "name": "BCKWorks",
-    "email": "ck@bckworks.com",
-    "url": "https://github.com/BCKWorks"
+    "name": "iNTERVR",
+    "email": "ckbang7@gmail.com",
+    "url": "https://github.com/iNTERVR"
   },
   "files": [
     "*.md",
