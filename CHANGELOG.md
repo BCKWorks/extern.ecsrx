@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.2.0] - 2020-08-13
+
+### Changed
+
+- Transfered from BCKWorks
+
 ## [1.1.3] - 2020-08-12
 
 ### Changed
