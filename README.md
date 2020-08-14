@@ -14,4 +14,4 @@ EcsRx는 iNTERVR의 외부에서 .NET 개발자들을 위하여 제작된 소프
 따라서, 특별한 용도 외에는 직접 설치할 것을 권장하지 않습니다.
 
 [EcsRx/ecsrx]: https://github.com/EcsRx/ecsrx
-[EcsRx for Unity3D(com.intervr.unity.extern.ecsrx)]: https://github.com/iNTERVR/TS.EcsRx
+[EcsRx for Unity3D(com.intervr.ts.ecsrx)]: https://github.com/iNTERVR/TS.EcsRx
