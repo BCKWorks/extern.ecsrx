@@ -25,7 +25,8 @@ namespace EcsRx.Extensions
         public static void RemoveEntity(this IEntityDatabase entityDatabase, IEntity entity)
         {
             var containingPool = entityDatabase.GetCollectionFor(entity);
-            containingPool.RemoveEntity(entity.Id);
+            if (containingPool != null)
+                containingPool.RemoveEntity(entity.Id);
         }
 
         public static void RemoveEntities(this IEntityDatabase entityDatabase, Func<IEntity, bool> predicate)
