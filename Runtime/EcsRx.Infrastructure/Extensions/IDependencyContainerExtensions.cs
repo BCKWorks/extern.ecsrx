@@ -161,5 +161,62 @@ namespace EcsRx.Infrastructure.Extensions
                 container.Bind(typeof(ISystem), applicableSystemType, bindingConfiguration);
             }
         }
+
+        public static void UnbindApplicableSystems(this IDependencyContainer container, params string[] namespaces)
+        {
+            var applicationAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var systemType = typeof(ISystem);
+
+            var applicableSystems = applicationAssemblies.SelectMany(x => x.GetTypes())
+                .Where(x =>
+                {
+                    if (x.IsInterface || x.IsAbstract)
+                    { return false; }
+
+                    if (string.IsNullOrEmpty(x.Namespace))
+                    { return false; }
+
+                    if (!systemType.IsAssignableFrom(x))
+                    { return false; }
+
+                    return namespaces.Any(namespaceToVerify => x.Namespace.Contains(namespaceToVerify));
+                })
+                .ToList();
+
+            foreach (var applicableSystemType in applicableSystems)
+            {
+                container.Unbind(applicableSystemType);
+            }
+        }
+
+        public static List<ISystem> ResolveApplicableSystems(this IDependencyContainer container, params string[] namespaces)
+        {
+            List<ISystem> systems = new List<ISystem>();
+            var applicationAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var systemType = typeof(ISystem);
+
+            var applicableSystems = applicationAssemblies.SelectMany(x => x.GetTypes())
+                .Where(x =>
+                {
+                    if (x.IsInterface || x.IsAbstract)
+                    { return false; }
+
+                    if (string.IsNullOrEmpty(x.Namespace))
+                    { return false; }
+
+                    if (!systemType.IsAssignableFrom(x))
+                    { return false; }
+
+                    return namespaces.Any(namespaceToVerify => x.Namespace.Contains(namespaceToVerify));
+                })
+                .ToList();
+
+            foreach (var applicableSystemType in applicableSystems)
+            {
+                systems.Add(container.Resolve(typeof(ISystem), applicableSystemType.Name) as ISystem);
+            }
+
+            return systems;
+        }
     }
 }
