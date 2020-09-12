@@ -23,6 +23,15 @@ namespace EcsRx.Plugins.ReactiveSystems
             container.Bind<IConventionalSystemHandler, TeardownSystemHandler>();
         }
 
+        public void UnsetupDependencies(IDependencyContainer container)
+        {
+            container.Unbind<IConventionalSystemHandler>();
+            container.Unbind<IConventionalSystemHandler>();
+            container.Unbind<IConventionalSystemHandler>();
+            container.Unbind<IConventionalSystemHandler>();
+            container.Unbind<IConventionalSystemHandler>();
+        }
+
         public IEnumerable<ISystem> GetSystemsForRegistration(IDependencyContainer container) => new ISystem[0];
     }
 }

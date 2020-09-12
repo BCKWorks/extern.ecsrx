@@ -20,7 +20,14 @@ namespace EcsRx.Plugins.Batching
             container.Bind<IReferenceBatchBuilderFactory, ReferenceBatchBuilderFactory>(x => x.AsSingleton());
             container.Bind<IBatchManager, BatchManager>(x => x.AsSingleton());
         }
-        
+
+        public void UnsetupDependencies(IDependencyContainer container)
+        {
+            container.Unbind<IBatchBuilderFactory>();
+            container.Unbind<IReferenceBatchBuilderFactory>();
+            container.Unbind<IBatchManager>();
+        }
+
         public IEnumerable<ISystem> GetSystemsForRegistration(IDependencyContainer container) => new ISystem[0];
     }
 }

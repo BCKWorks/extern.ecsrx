@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.5.0] - 2020-09-12
+
+### Added
+
+- Unset dependencies Plugin System
+
+
 ## [1.4.1] - 2020-08-17
 
 ### Changed
