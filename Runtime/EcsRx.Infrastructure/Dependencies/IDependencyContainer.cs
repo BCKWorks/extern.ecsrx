@@ -57,7 +57,14 @@ namespace EcsRx.Infrastructure.Dependencies
         /// </summary>
         /// <param name="type">The type to unbind</param>
         void Unbind(Type type);
-        
+
+        /// <summary>
+        /// Unbinds a type from the container
+        /// </summary>
+        /// <param name="fromType">The fromType to unbind</param>
+        /// <param name="toType">The toType to unbind</param>
+        void UnbindId(Type fromType, Type toType, string name = null);
+
         /// <summary>
         /// Gets an enumerable of a given type from the underlying DI container
         /// </summary>

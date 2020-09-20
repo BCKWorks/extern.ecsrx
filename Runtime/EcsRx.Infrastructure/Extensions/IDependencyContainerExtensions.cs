@@ -185,7 +185,7 @@ namespace EcsRx.Infrastructure.Extensions
 
             foreach (var applicableSystemType in applicableSystems)
             {
-                container.Unbind(applicableSystemType);
+                container.UnbindId(typeof(ISystem), applicableSystemType, applicableSystemType.Name);
             }
         }
 
