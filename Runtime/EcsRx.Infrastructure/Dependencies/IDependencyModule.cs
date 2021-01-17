@@ -1,4 +1,6 @@
-﻿namespace EcsRx.Infrastructure.Dependencies
+﻿using System.Collections;
+
+namespace EcsRx.Infrastructure.Dependencies
 {
     /// <summary>
     /// This represents a cross platform DI module which contains
@@ -17,5 +19,9 @@
         /// </summary>
         /// <param name="container">The container to bind with</param>
         void Setup(IDependencyContainer container);
+
+        IEnumerator Initialize(IDependencyContainer container);
+
+        void Shutdown(IDependencyContainer container);
     }
 }

@@ -15,6 +15,7 @@ using EcsRx.MicroRx.Events;
 using EcsRx.Pools;
 using EcsRx.Scheduling;
 using EcsRx.Threading;
+using System.Collections;
 
 namespace EcsRx.Infrastructure.Modules
 {
@@ -46,6 +47,15 @@ namespace EcsRx.Infrastructure.Modules
             var componentTypeAssigner = container.Resolve<IComponentTypeAssigner>();
             var allComponents = componentTypeAssigner.GenerateComponentLookups();
             return new ComponentTypeLookup(allComponents);
+        }
+
+        public IEnumerator Initialize(IDependencyContainer container)
+        {
+            yield break;
+        }
+
+        public void Shutdown(IDependencyContainer container)
+        {
         }
     }
 }

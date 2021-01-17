@@ -77,5 +77,8 @@ namespace EcsRx.Infrastructure.Dependencies
         /// </summary>
         /// <param name="module">Type of module to load</param>
         void LoadModule(IDependencyModule module);
+
+        IEnumerator InitializeModules();
+        void UnloadModules();
     }
 }

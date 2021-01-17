@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.7.0] - 2021-01-17
+
+### Added
+
+- IDependencyContainer initialize asynced and shutdown
+
 ## [1.6.1] - 2020-09-20
 
 ### Added
