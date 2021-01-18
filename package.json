@@ -2,7 +2,7 @@
   "name": "com.intervr.ts.ecsrx",
   "displayName": "iNTERVR Tech Stack EcsRx",
   "description": "A reactive take on the ECS pattern for .net game developers",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "unity": "2020.2",
   "keywords": [],
   "homepage": "https://github.com/iNTERVR/TS.EcsRx#readme",
