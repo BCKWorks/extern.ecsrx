@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.9.0] - 2021-01-24
+
+### Changed
+
+- IConvertToEntity remove IComponent argument always new component
+
 ## [1.8.0] - 2021-01-19
 
 ### Removed
